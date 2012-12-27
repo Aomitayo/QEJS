@@ -133,7 +133,7 @@ var parse = exports.parse = function(str, options){
     , close = options.close || exports.close || '%>';
 
   var buf = [
-      "var buf = [];"
+      "var buf = arguments.callee.buf = [];"
     , "\nwith (locals) {"
     , "\n  buf.push('"
   ];
